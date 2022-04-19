@@ -1,25 +1,25 @@
 class Classwork1
 {
-    string Greatest(int num1, int num2, int num3)
+    int Greatest(int num1, int num2, int num3)
     {
     if(num1 > num2)
     {
         if(num1 > num3)
         {
-            Console.WriteLine("number 1 is greatest.");
+            return num1;
         }
         else
         {
-            Console.Writeline("Number 3 is the greated.");
+            return num3;
         }
     }
     else if(num2 > num3)
     {
-        Console.Writeline("Number 2 is the greatest.");
+        return num2;
     } 
     else
     {
-        Console.Writeline("Number 3 is the greatest.");
+        return num3;
     }
     }
 }
