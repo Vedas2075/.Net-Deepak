@@ -33,7 +33,5 @@ class Array{
             data[0] = new bool[3] {true, false, false};
             data[1] = new bool[2] {true, false};
         }
-
-
-
+        bool[] = {true, false};
 }
