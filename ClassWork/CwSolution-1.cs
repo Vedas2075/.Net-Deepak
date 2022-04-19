@@ -1,5 +1,7 @@
-class Greatest(int num1, int num2, int num3)
+class Classwork1
 {
+    string Greatest(int num1, int num2, int num3)
+    {
     if(num1 > num2)
     {
         if(num1 > num3)
@@ -18,5 +20,6 @@ class Greatest(int num1, int num2, int num3)
     else
     {
         Console.Writeline("Number 3 is the greatest.");
+    }
     }
 }
