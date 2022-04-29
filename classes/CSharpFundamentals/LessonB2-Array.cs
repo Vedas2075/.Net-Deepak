@@ -24,7 +24,7 @@ class Array{
             {"F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8"},
             {"G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8"},
             {"H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8"},
-        }
+        };
 
         // Jagged Array
         bool[][] data = new bool[5][];
@@ -33,5 +33,5 @@ class Array{
             data[0] = new bool[3] {true, false, false};
             data[1] = new bool[2] {true, false};
         }
-        bool[] = {true, false};
+        bool[] c = {true, false};
 }

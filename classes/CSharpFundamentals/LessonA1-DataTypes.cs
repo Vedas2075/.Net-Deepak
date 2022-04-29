@@ -15,31 +15,27 @@ namespace ABC{
             Console.Write("Hey There!!");  
             // Data Types Direct Vs Implicit
             // Numbers --> Integer, Floating point
-            byte a=24// 8-bit
-            short b=334;  // 16-bit 
-            int x = 553231;
-            long d=111122222222223333;
+            // byte a =24; // 8-bit
+            // short b=334;  // 16-bit 
+            // int x = 553231;
+            // long d=111122222222223333;
 
-            float e = 467.232f;
-            double f = 2321.32444444;
-            decimal g=234444.2344444444444444444444444; //16-bit
+            // float e = 467.232f;
+            // double f = 2321.32444444;
+            // decimal g=234444.2344444444444444444444444M; //16-bit
             
-            bool h=true;
+            // bool h=true;
 
-            char i = 'D';
-            string j = "Deep";
+            // char i = 'D';
+            // string j = "Deep";
 
-            object 0 = "";
+            object o = "";
 
             // Nullable 
-            int? population = 2342;
+            // int? population = 2342;
 
             //Var type --> Dynamic value assigning
-            var x = GetSum();
-
-
-
-
+            // var xa = "GetSum()";
         }
     }
 }
