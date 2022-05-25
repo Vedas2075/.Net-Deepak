@@ -1,38 +1,35 @@
-using System;
+// using System;
 // public class Person
 // {
-    // string name;
+//     string name;
+//     // Full property syntax
+//     public string Name
+//     {
+//         get
+//         {
+//             return name;
+//         }
+//         set
+//         {
+//             if (value.Length > 2)
+//                 name = value;
+//         }
+//     }
 
-    //   public void SetName(string value)
-    // {
-    //     // if(value.Length > 2)
-    //     // {
-    //     //     name = value;
-    //     // }
-    // }
+//     // Auto implemeted property
+//     public DateTime Dob { get; set; }
 
-    // full property syntax
-    // public string Name
-    // {
-    //     get
-    //     {
-    //         return name;
-    //     }
+//     // Readonly property
+//     public string Address { get; set; }
 
-    //     set
-    //     {
-    //     if(value.Length > 2)
-    //         name = value;
-        
-    //     }
-    // }
-    // // DateTime dob; 
-    // public DateTime Dob {get; set; } // private field auto implemented property
+//     // Default value
+//     public char Gen { get; set; } = 'F';
+//     public Gender Sex { get; private set; } = Gender.Female;
+// }
 
-    // public string address;
-    
-    // Readonly property
-    // public string Address{get;}
-
-    // public char Gender{get; private set; } = 'F';
-// } 
+// public enum Gender
+// {
+//     Male,
+//     Female,
+//     Others   
+// }
