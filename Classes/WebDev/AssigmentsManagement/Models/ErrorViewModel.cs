@@ -1,4 +1,4 @@
-namespace AssignmentsManagement.Models;
+namespace AssigmentsManagement.Models;
 
 public class ErrorViewModel
 {

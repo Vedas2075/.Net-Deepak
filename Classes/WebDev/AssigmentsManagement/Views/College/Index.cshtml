@@ -1,0 +1,28 @@
+@model List<College>
+
+<h3>All Colleges</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Address</th>
+      <th scope="col">Established</th>
+      <th scope="col">Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var college in Model)
+        {
+            <tr>
+              <th scope="row">i</th>
+              <td>@college.Name</td>
+              <td>@college.Description</td>
+              <td>@college.Address</td>
+              <td>@college.EstablishedDate</td>
+              <td>@college.Rank</td>
+          </tr>
+        }
+  </tbody>
+</table>
