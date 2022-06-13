@@ -1,0 +1,32 @@
+﻿@model College
+
+<form class="row g-3" asp-controller="College" asp-action="Edit" method="post">
+  <div class="col-md-4">
+    <label asp-for="Name" class="form-label"></label>    
+    <input class="form-control" asp-for="Name">
+  </div>
+
+ <div class="col-md-4">
+    <label asp-for="EstablishedDate" class="form-label"></label>    
+    <input class="form-control" asp-for="EstablishedDate">
+  </div>
+
+  <div class="col-md-4">
+    <label asp-for="Rank" class="form-label"></label>    
+    <input class="form-control" asp-for="Rank">
+  </div>
+
+  <div class="col-12">
+    <label asp-for="Address" class="form-label"></label>    
+    <input class="form-control" asp-for="Address">
+  </div>
+
+  <div class="col-12">
+    <label asp-for="Description" class="form-label"></label>    
+    <textarea class="form-control" asp-for="Description"></textarea>
+  </div>
+  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>

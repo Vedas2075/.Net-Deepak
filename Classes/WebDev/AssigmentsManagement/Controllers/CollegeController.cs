@@ -1,32 +1,50 @@
+using AssigmentsManagement.Data;
 using AssigmentsManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 
-public class CollegeController: Controller
+public class CollegeController : Controller
 {
-    List<College> colleges = new()
+    private readonly AssignmentMgmtDb _db;
+
+    public CollegeController(AssignmentMgmtDb db)
     {
-        new College() { Name = "Vedas", Description = "IT college, affiliated to TU", Address = "Lalitpur", EstablishedDate = DateTime.Now, Rank = 7 },
-        new College() { Name = "Himalayan", Description = "IT college, affiliated to TU", Address = "Bhaktapur", EstablishedDate = DateTime.Now, Rank = 3 },
-        new College() { Name = "Vedas1", Description = "IT college, affiliated to TU", Address = "Lalitpur", EstablishedDate = DateTime.Now, Rank = 1 },
-        new College() { Name = "Vedas2", Description = "IT college, affiliated to TU", Address = "Bhaktapur", EstablishedDate = DateTime.Now, Rank = 4 },
-        new College() { Name = "Vedas3", Description = "IT college, affiliated to TU", Address = "Kathmandu", EstablishedDate = DateTime.Now, Rank = 10 }
-    };
+        _db = db;
+    }
 
     public IActionResult Index()
     {
+        var colleges = _db.Colleges.ToList();
         return View(colleges);
     }
 
-    [HttpGet]
     public IActionResult Add()
     {
         return View();
     }
 
     [HttpPost]
-    public IActionResult Add()
+    public IActionResult Add(College college)
     {
-        colleges.Add(college);
+        // Save college
+        _db.Colleges.Add(college);
+        _db.SaveChanges();
+
+        return RedirectToAction(nameof(Index)); 
+    }
+
+    public IActionResult Edit(int id)
+    {
+        var collegeToEdit = _db.Colleges.Find(id);
+        return View(collegeToEdit);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(College college)
+    {
+        // Save college
+        _db.Colleges.Update(college);
+        _db.SaveChanges();
+
         return RedirectToAction(nameof(Index));
     }
 }

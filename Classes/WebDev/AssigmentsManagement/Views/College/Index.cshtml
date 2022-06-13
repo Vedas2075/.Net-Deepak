@@ -4,24 +4,31 @@
 <table class="table">
   <thead>
     <tr>
+      
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Description</th>
       <th scope="col">Address</th>
       <th scope="col">Established</th>
       <th scope="col">Rank</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
+      @{ int i = 1; }
       @foreach(var college in Model)
         {
             <tr>
-              <th scope="row">i</th>
+              
+              <th scope="row">@i++</th>
               <td>@college.Name</td>
               <td>@college.Description</td>
               <td>@college.Address</td>
               <td>@college.EstablishedDate</td>
               <td>@college.Rank</td>
+              <th>
+                  <a class="btn btn-warning" href="/college/edit/@college.ID">Edit</a> 
+                  <a class="btn btn-danger" href="/college/delete/@college.ID">Delete</a> </th>
           </tr>
         }
   </tbody>
