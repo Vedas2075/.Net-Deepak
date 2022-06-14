@@ -26,6 +26,9 @@
                 <td>@college.Address</td>
                 <td>@college.EstablishedDate</td>
                 <td>@college.Rank</td>
+                <th>
+                  <a class="btn btn-warning" href="/college/edit/@college.ID">Edit</a> 
+                  <a class="btn btn-danger" href="/college/delete/@college.ID">Delete</a> </th>
             </tr>
         }
     </tbody>
@@ -35,6 +38,7 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteCollege">
   Delete
 </button>
+
 <!-- Modal -->
 <div class="modal fade" id="deleteCollege" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
