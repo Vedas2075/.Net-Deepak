@@ -11,5 +11,7 @@ namespace AssigmentsManagement.Data
         }
 
         public DbSet<College> Colleges { get; set; }
+
+        public DbSet<AssigmentsManagement.Models.Teacher>? Teacher { get; set; }
     }
 }

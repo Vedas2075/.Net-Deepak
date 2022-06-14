@@ -1,3 +1,4 @@
+## Lifecycle in SD
 Development - Code, unit tests
 QA/Tst - Testers (Manual, Automated)
 UAT - User Acceptance Testing
@@ -5,6 +6,7 @@ Prod - Live version
 
 ## ORM tool
 EF Core --> Entity Framework Core tool
+Dapper --> Developed by StackOverFlow Developer(.net core)
 
 #Database Access
 * EF CORE
@@ -27,5 +29,8 @@ builder.Services.AddDbContext<AssignmentMgmtDb>(options =>
 		);
 '''
 
-	• dotnet ef migrations add InitialDbCreation
+	• dotnet ef migrations add InitialDbCreation   // Database changes 
 	• Dotnet ef database update
+
+
+Assignment --> Student and Code with assignment model

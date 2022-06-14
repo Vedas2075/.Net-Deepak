@@ -1,3 +1,4 @@
+using System.Linq;
 using AssigmentsManagement.Data;
 using AssigmentsManagement.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ public class CollegeController : Controller
         return View(colleges);
     }
 
+    [HttpGet]
     public IActionResult Add()
     {
         return View();
@@ -29,13 +31,13 @@ public class CollegeController : Controller
         _db.Colleges.Add(college);
         _db.SaveChanges();
 
-        return RedirectToAction(nameof(Index)); 
+        return RedirectToAction(nameof(Index));
     }
 
     public IActionResult Edit(int id)
     {
-        var collegeToEdit = _db.Colleges.Find(id);
-        return View(collegeToEdit);
+        var collgeToEdit = _db.Colleges.Find(id);
+        return View(collgeToEdit);
     }
 
     [HttpPost]
@@ -47,4 +49,19 @@ public class CollegeController : Controller
 
         return RedirectToAction(nameof(Index));
     }
+
+    public IActionResult Delete(int id)
+    {
+        var collgeToEdit = _db.Colleges.Find(id);
+        return View(collgeToEdit);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(College college)
+    {
+        _db.Colleges.Remove(college);
+        _db.SaveChanges();
+        return RedirectToAction(nameof(Index));
+    }
+
 }
