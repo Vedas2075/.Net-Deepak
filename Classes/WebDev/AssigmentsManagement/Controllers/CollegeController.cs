@@ -6,12 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 public class CollegeController : Controller
 {
     private readonly AssignmentMgmtDb _db;
-
     public CollegeController(AssignmentMgmtDb db)
     {
         _db = db;
     }
-
     public IActionResult Index()
     {
         var colleges = _db.Colleges.ToList();
@@ -43,7 +41,6 @@ public class CollegeController : Controller
     [HttpPost]
     public IActionResult Edit(College college)
     {
-        // Save college
         _db.Colleges.Update(college);
         _db.SaveChanges();
 
