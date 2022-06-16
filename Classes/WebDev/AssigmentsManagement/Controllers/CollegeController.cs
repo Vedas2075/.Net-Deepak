@@ -10,9 +10,17 @@ public class CollegeController : Controller
     {
         _db = db;
     }
-    public IActionResult Index()
+    public IActionResult Index(int count=100)
     {
-        var colleges = _db.Colleges.ToList();
+        var colleges = _db.Colleges.ToList().Take(count).ToList();
+
+        HttpContext.Session.SetString("sdfsadf", "sdfasfda");
+
+        CookieOptions cookieOptions = new();
+        cookieOptions.Expires = DateTime.Now.AddMonths(1);
+        Response.Cookies.Append("brand", "Vedas College", cookieOptions);
+
+        TempData["brand"] = "This is AMA developed by Vedas Student.";
         return View(colleges);
     }
 

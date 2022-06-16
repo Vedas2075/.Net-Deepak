@@ -1,6 +1,7 @@
 @model List<College>
-
 <h3>All Colleges</h3>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -18,7 +19,7 @@
             int i = 1;
         }
         @foreach (var college in Model)
-        {
+        {            
             <tr>
                 <th scope="row">@(i++)</th>
                 <td>@college.Name</td>
@@ -27,10 +28,11 @@
                 <td>@college.EstablishedDate</td>
                 <td>@college.Rank</td>
                 <th>
-                  <a class="btn btn-warning" href="/college/edit/@college.ID">Edit</a> 
-                  <a class="btn btn-danger" href="/college/delete/@college.ID">Delete</a> </th>
+                  <a class="btn btn-warning" href="/college/edit/@college.Id">Edit</a> 
+                  <a class="btn btn-danger" href="/college/delete/@college.Id">Delete</a> </th>
             </tr>
         }
+
     </tbody>
 </table>
 
